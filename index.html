@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGIAS - Aerolínea</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            text-align: center;
+        }
+        
+        .logo-img {
+            width: 400px;
+            height: auto;
+            transition: width 0.3s;
+            cursor: pointer;
+        }
+        
+        .logo-img.enlarge {
+            width: 600px;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .date-input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sistema de Gestión Integral para Aerolíneas (SGIAS)</h1>
+            <nav>
+                <ul>
+                    <li><a href="#DepartamentoIT">Departamento de IT</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#organiza-viaje">Organiza tu viaje</a></li>
+                    <li><a href="#aerolineas">Soporte para Aerolíneas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="DepartamentoIT">
+        <div class="container">
+            <h2>Departamento de IT</h2>
+            <p>El departamento de IT gestiona la infraestructura tecnológica,
+            proporciona soporte técnico y garantiza la seguridad informática.
+            Además, administra sistemas de comunicación y bases de datos, desarrolla
+            software y facilita el acceso a cursos de formación en tecnología para los empleados.</p>
+            <div class="DepartamentoIT">
+                <img src="1.png" class="logo-img">
+                <img src="2.png" class="logo-img">
+                <img src="4.png" class="logo-img">
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="servicios">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <img src="https://media.istockphoto.com/id/955952680/es/foto/avi%C3%B3n-comercial-de-pasajeros-volando-por-encima-de-las-nubes.jpg?s=612x612&w=0&k=20&c=eJ16Fp4fVQZzwJDauYaqkdH9ORjFSyEqGf7XEpLb2ck=" alt="Vuelos">
+                    <h3>Vuelos</h3>
+                    <p>Ofrecemos una amplia gama de destinos y horarios para satisfacer tus necesidades de viaje.</p>
+                </div>
+                <div class="servicio">
+                    <img src="https://www.wisiwise.com/wp-content/uploads/2018/02/wisiwise-como-aumentar-reservas-online-hotel.jpg" alt="Hotel">
+                    <h3>Reserva de Hotel</h3>
+                    <p>Te ayudamos a encontrar el alojamiento perfecto para tu viaje, al mejor precio garantizado.</p>
+                </div>
+                <div class="servicio">
+                    <img src="https://www.ocu.org/-/media/proteste/images/home/carros-e-mobilidade/mobilidade-urbana/rent-a-car-um.jpg?rev=fdbbfd85-7720-4597-ad79-d7f6a8282056&mw=480&hash=8474D95AF7323681886C09DC01604D37" alt="Alquiler de Coches">
+                    <h3>Alquiler de Coches</h3>
+                    <p>Facilitamos la reserva de coches en destinos populares, para que puedas explorar a tu ritmo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aerolineas">
+        <div class="container">
+            <h2>Soporte para Aerolíneas</h2>
+            <p>Brindamos soporte a las principales aerolíneas internacionales, incluyendo JetBlue, American Airlines y British Airways, para garantizar una experiencia de viaje sin problemas.</p>
+            <div class="logos-aerolineas">
+                <img src="https://seeklogo.com/images/J/jetblue-airways-logo-036DBD6482-seeklogo.com.png" alt="JetBlue">
+                <img src="https://i.pinimg.com/564x/8a/54/78/8a54782fde05639d714a9e14b47bd5b0.jpg" alt="American Airlines">
+                <img src="https://1000logos.net/wp-content/uploads/2016/10/British-Airways-Logo.png" alt="British Airways">
+            </div>
+        </div>
+    </section>
+
+    <section id="organiza-viaje">
+        <div class="container">
+            <h2>Organiza Tu Viaje</h2>
+            <div class="viaje-form">
+                <div class="form-group">
+                    <label for="origin">Origen:</label>
+                    <input type="text" id="origin" name="origin" class="city-input" placeholder="Selecciona una ciudad">
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destino:</label>
+                    <input type="text" id="destination" name="destination" class="city-input" placeholder="Selecciona una ciudad">
+                </div>
+                <div class="form-group">
+                    <label for="departure-date">Fecha de Salida:</label>
+                    <input type="date" id="departure-date" name="departure-date">
+                </div>
+                <div class="form-group">
+                    <label for="return-date">Fecha de Regreso:</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SGIAS - Aerolínea</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var logoImgs = document.querySelectorAll('.logo-img');
+
+            logoImgs.forEach(function (logoImg) {
+                logoImg.addEventListener('click', function () {
+                    if (logoImg.classList.contains('enlarge')) {
+                        logoImg.classList.remove('enlarge');
+                    } else {
+                        logoImgs.forEach(function (img) {
+                            img.classList.remove('enlarge');
+                        });
+                        logoImg.classList.add('enlarge');
+                    }
+                });
+            });
+
+            window.addEventListener('click', function (event) {
+                if (!event.target.matches('.logo-img')) {
+                    logoImgs.forEach(function (logoImg) {
+                        logoImg.classList.remove('enlarge');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
